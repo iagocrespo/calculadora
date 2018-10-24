@@ -2,6 +2,9 @@ const container = document.querySelector(".todo");
 
 container.addEventListener("click", onClick);
 
+let firstNumber = "";
+let secondNumber = "";
+let operator = "";
 
 function onClick(evento) {
   const valor = evento.target;
@@ -10,8 +13,8 @@ function onClick(evento) {
     escribir.innerText = valor.innerText;
   }
 
-  let characters = evento.target.innerText;
-  switch (characters) {
+  let character = evento.target.innerText;
+  switch (character) {
     case "0":
     case "1":
     case "2":
@@ -22,35 +25,37 @@ function onClick(evento) {
     case "7":
     case "8":
     case "9":
-      escribir.innerText = valor.innerText;
+      firstNumber = firstNumber + character;
+      escribir.innerText = firstNumber;
       break;
 
     case "C":
-      escribir.innerText = "0"
+      firstNumber = "";
+      escribir.innerText = "0";
       break;
 
     case "←":
-      escribir.innerText = ""
+      escribir.innerText = "";
       break;
 
     case "÷":
-    escribir.innerText = ""
+      escribir.innerText = "";
       break;
 
     case "×":
-    escribir.innerText = ""
+      escribir.innerText = "";
       break;
 
     case "−":
-      escribir.innerText = ""
+      escribir.innerText = "";
       break;
 
     case "+":
-      escribir.innerText = ""
+      escribir.innerText = "";
       break;
 
     case "=":
-      escribir.innerText = ""
+      escribir.innerText = "";
       break;
   }
 }
