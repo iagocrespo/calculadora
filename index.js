@@ -9,4 +9,11 @@ function onClick(evento) {
   if (evento.target.tagName === "BUTTON") {
     escribir.innerText = valor.innerText;
   }
+
+  let characters = evento.target.innerText;
+  switch (characters) {
+    case "C":
+    escribir.innerText = "0"
+      break;
+  }
 }
