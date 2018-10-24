@@ -42,6 +42,7 @@ function onClick(evento) {
     case "C":
       firstNumber = "";
       secondNumber = "";
+      operator = "0";
       escribir.innerText = "0";
       break;
 
@@ -61,4 +62,9 @@ function onClick(evento) {
       escribir.innerText = "";
       break;
   }
+}
+
+if (operator === "+") {
+  let resultSuma = parseInt(firstNumber) + parseInt(secondNumber);
+  escribir.innerText = String(resultSuma);
 }
