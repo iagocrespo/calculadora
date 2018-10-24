@@ -25,8 +25,18 @@ function onClick(evento) {
     case "7":
     case "8":
     case "9":
-      firstNumber = firstNumber + character;
-      escribir.innerText = firstNumber;
+      if (
+        operator !== "÷" &&
+        operator !== "×" &&
+        operator !== "−" &&
+        operator !== "+"
+      ) {
+        firstNumber = firstNumber + character;
+        escribir.innerText = firstNumber;
+      } else {
+        secondNumber = secondNumber + character;
+        escribir.innerText = secondNumber;
+      }
       break;
 
     case "C":
@@ -39,18 +49,10 @@ function onClick(evento) {
       break;
 
     case "÷":
-      escribir.innerText = "";
-      break;
-
     case "×":
-      escribir.innerText = "";
-      break;
-
     case "−":
-      escribir.innerText = "";
-      break;
-
     case "+":
+      operator = character;
       escribir.innerText = "";
       break;
 
