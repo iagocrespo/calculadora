@@ -41,6 +41,7 @@ function onClick(evento) {
 
     case "C":
       firstNumber = "";
+      secondNumber = "";
       escribir.innerText = "0";
       break;
 
