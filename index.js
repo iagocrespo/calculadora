@@ -65,29 +65,29 @@ function onClick(evento) {
       break;
 
     case "=":
+      let resultado;
       if (operator === "+") {
-        let resultSuma = parseInt(firstNumber) + parseInt(secondNumber);
-        escribir.innerText = String(resultSuma);
-        firstNumber = String(resultSuma);
+        let resultado = parseInt(firstNumber) + parseInt(secondNumber);
+        escribir.innerText = String(resultado);
+        firstNumber = String(resultado);
       }
 
       if (operator === "−") {
-        let resultResta = parseInt(firstNumber) - parseInt(secondNumber);
-        escribir.innerText = String(resultResta);
-        firstNumber = String(resultResta);
+        let resultado = parseInt(firstNumber) - parseInt(secondNumber);
+        escribir.innerText = String(resultado);
+        firstNumber = String(resultado);
       }
 
       if (operator === "×") {
-        let resultMultiplicacion =
-          parseInt(firstNumber) * parseInt(secondNumber);
-        escribir.innerText = String(resultMultiplicacion);
-        firstNumber = String(resultMultiplicacion);
+        let resultado = parseInt(firstNumber) * parseInt(secondNumber);
+        escribir.innerText = String(resultado);
+        firstNumber = String(resultado);
       }
 
       if (operator === "÷") {
-        let resultDivision = parseInt(firstNumber) / parseInt(secondNumber);
-        escribir.innerText = String(resultDivision);
-        firstNumber = String(resultDivision);
+        let resultado = parseInt(firstNumber) / parseInt(secondNumber);
+        escribir.innerText = String(resultado);
+        firstNumber = String(resultado);
       }
 
       operator = "";
