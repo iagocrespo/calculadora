@@ -49,10 +49,18 @@ function onClick(evento) {
     case "←":
       if (operator === "") {
         firstNumber = firstNumber.slice(0, firstNumber.length - 1);
-        escribir.innerText = firstNumber;
+        if (firstNumber === "") {
+          escribir.innerText = "0";
+        } else {
+          escribir.innerText = firstNumber;
+        }
       } else {
         secondNumber = secondNumber.slice(0, secondNumber.length - 1);
-        escribir.innerText = secondNumber;
+        if (secondNumber === "") {
+          escribir.innerText = "0";
+        } else {
+          escribir.innerText = secondNumber;
+        }
       }
       break;
 
