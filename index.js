@@ -59,12 +59,26 @@ function onClick(evento) {
       break;
 
     case "=":
-      escribir.innerText = "";
+      if (operator === "+") {
+        let resultSuma = parseInt(firstNumber) + parseInt(secondNumber);
+        escribir.innerText = String(resultSuma);
+      }
+
+      if (operator === "−") {
+        let resultResta = parseInt(firstNumber) - parseInt(secondNumber);
+        escribir.innerText = String(resultResta);
+      }
+
+      if (operator === "×") {
+        let resultMultiplicacion =
+          parseInt(firstNumber) * parseInt(secondNumber);
+        escribir.innerText = String(resultMultiplicacion);
+      }
+
+      if (operator === "÷") {
+        let resultDivision = parseInt(firstNumber) / parseInt(secondNumber);
+        escribir.innerText = String(resultDivision);
+      }
       break;
   }
-}
-
-if (operator === "+") {
-  let resultSuma = parseInt(firstNumber) + parseInt(secondNumber);
-  escribir.innerText = String(resultSuma);
 }
