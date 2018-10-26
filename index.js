@@ -47,6 +47,13 @@ function onClick(evento) {
       break;
 
     case "←":
+      if (operator === "") {
+        firstNumber = firstNumber - 1;
+        escribir.innerText = firstNumber; //AQUI FALTA;
+      } else {
+        escribir.innerText = String(secondNumber); //AQUI FALTA;
+      }
+
       escribir.innerText = "";
       break;
 
@@ -62,23 +69,30 @@ function onClick(evento) {
       if (operator === "+") {
         let resultSuma = parseInt(firstNumber) + parseInt(secondNumber);
         escribir.innerText = String(resultSuma);
+        firstNumber = String(resultSuma);
       }
 
       if (operator === "−") {
         let resultResta = parseInt(firstNumber) - parseInt(secondNumber);
         escribir.innerText = String(resultResta);
+        firstNumber = String(resultResta);
       }
 
       if (operator === "×") {
         let resultMultiplicacion =
           parseInt(firstNumber) * parseInt(secondNumber);
         escribir.innerText = String(resultMultiplicacion);
+        firstNumber = String(resultMultiplicacion);
       }
 
       if (operator === "÷") {
         let resultDivision = parseInt(firstNumber) / parseInt(secondNumber);
         escribir.innerText = String(resultDivision);
+        firstNumber = String(resultDivision);
       }
+
+      operator = "";
+      secondNumber = "";
       break;
   }
 }
