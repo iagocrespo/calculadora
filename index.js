@@ -48,13 +48,12 @@ function onClick(evento) {
 
     case "←":
       if (operator === "") {
-        firstNumber = firstNumber - 1;
-        escribir.innerText = firstNumber; //AQUI FALTA;
+        firstNumber = firstNumber.slice(0, firstNumber.length - 1);
+        escribir.innerText = firstNumber;
       } else {
-        escribir.innerText = String(secondNumber); //AQUI FALTA;
+        secondNumber = secondNumber.slice(0, secondNumber.length - 1);
+        escribir.innerText = secondNumber;
       }
-
-      escribir.innerText = "";
       break;
 
     case "÷":
